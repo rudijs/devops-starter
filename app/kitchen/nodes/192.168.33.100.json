@@ -1,0 +1,22 @@
+{
+  "name": "rose",
+  "set_fqdn": "rose.example.com",
+  "postfix": {
+    "main": {
+      "hostname": "rose",
+      "mydomain": "example.com",
+      "smtpd_use_tls": "no"
+    },
+    "aliases": {
+      "root": "ooly.me@gmail.com"
+    }
+  },
+  "run_list": [
+    "recipe[common]",
+    "recipe[consul-server]",
+    "recipe[docker-wrapper]"
+  ],
+  "automatic": {
+    "ipaddress": "192.168.33.100"
+  }
+}

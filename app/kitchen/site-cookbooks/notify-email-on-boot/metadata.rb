@@ -1,0 +1,7 @@
+name             'notify-email-on-boot'
+maintainer       'Rudi Starcevic'
+maintainer_email 'ooly.me@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures notify-email-on-boot'
+long_description 'Installs/Configures notify-email-on-boot'
+version          '0.1.0'

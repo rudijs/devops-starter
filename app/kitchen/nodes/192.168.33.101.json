@@ -1,0 +1,22 @@
+{
+  "name": "crimson",
+  "set_fqdn": "crimson.example.com",
+  "postfix": {
+    "main": {
+      "hostname": "crimson",
+      "mydomain": "example.com",
+      "smtpd_use_tls": "no"
+    },
+    "aliases": {
+      "root": "ooly.me@gmail.com"
+    }
+  },
+  "run_list": [
+    "recipe[common]",
+    "recipe[consul-agent]",
+    "recipe[docker-wrapper]"
+  ],
+  "automatic": {
+    "ipaddress": "192.168.33.101"
+  }
+}
