@@ -40,6 +40,16 @@ class MyCLI < Thor
     puts "==> #{cmd}"; system cmd
   end
 
+  desc "sshcopyid_ubuntu", "Copies vagrant/.ssh to ubuntu/.ssh"
+  option :user, :default => default[:user]
+  option :hostname, :default => default[:hostname]
+
+  def sshcopyid_ubuntu
+    puts "==> Copying vagrant/.ssh/authorized_keys to ubuntu/.ssh/authorized_keys on host #{options[:hostname]}..."
+    cmd = "ssh #{options[:user]}@#{options[:hostname]} 'sudo cp -v /home/vagrant/.ssh/authorized_keys /home/ubuntu/.ssh/ && sudo chown -v ubuntu.ubuntu /home/ubuntu/.ssh/authorized_keys'"
+    puts "==> #{cmd}"; system cmd
+  end
+
   desc "create_ubuntu_account", "Creates a user account named ubuntu with full sudoer permissions"
   option :user, :default => default[:user]
   option :hostname, :default => default[:hostname]
