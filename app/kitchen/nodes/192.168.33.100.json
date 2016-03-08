@@ -18,6 +18,9 @@
     "recipe[docker-wrapper]",
     "recipe[docker-registrator-server]",
     "recipe[docker-felk]"
+
+    //TODO  "recipe[ssh-hardening]"
+    
   ],
   "automatic": {
     "ipaddress": "192.168.33.100"

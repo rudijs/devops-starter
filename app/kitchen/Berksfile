@@ -3,6 +3,7 @@ source 'https://api.berkshelf.com'
 cookbook 'timezone-ii'
 cookbook 'hostname'
 cookbook 'os-hardening'
+cookbook 'ssh-hardening'
 cookbook 'consul'
 cookbook 'docker'
 cookbook "unattended_upgrades"
