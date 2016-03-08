@@ -14,7 +14,9 @@
   "run_list": [
     "recipe[common]",
     "recipe[consul-agent]",
-    "recipe[docker-wrapper]"
+    "recipe[dnsmasq]",
+    "recipe[docker-wrapper]",
+    "recipe[docker-registrator-agent]"
   ],
   "automatic": {
     "ipaddress": "192.168.33.101"

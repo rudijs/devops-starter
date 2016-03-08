@@ -50,20 +50,20 @@ Typically this is in sudoers.d file: /etc/sudoers.d/90-cloud-init-users
 
 DB server
 
-- `docker-machine create --driver generic --generic-ip-address=192.168.33.100 --generic-ssh-user=ubuntu db`
+- `docker-machine create --driver generic --generic-ip-address=192.168.33.100 --generic-ssh-user=ubuntu rose.example.com`
 
 APP server
 
-- `docker-machine create --driver generic --generic-ip-address=192.168.33.101 --generic-ssh-user=ubuntu app`
+- `docker-machine create --driver generic --generic-ip-address=192.168.33.101 --generic-ssh-user=ubuntu crimson.example.com`
 
 Docker Usage:
 
 Point your local docker client to the VM you wish to issue docker commands on:
 
 - `docker-machine ls`
-- `eval $(docker-machine env db)`
+- `eval $(docker-machine env rose.example.com)`
 - or
-- `eval $(docker-machine env app)`
+- `eval $(docker-machine env crimson.example.com)`
 
 Now run command on docker VMs
 

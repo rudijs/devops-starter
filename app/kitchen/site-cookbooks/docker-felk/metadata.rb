@@ -1,0 +1,7 @@
+name             'docker-felk'
+maintainer       'Rudi Starcevic'
+maintainer_email 'ooly.me@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures docker-felk'
+long_description 'Installs/Configures docker-felk'
+version          '0.1.0'

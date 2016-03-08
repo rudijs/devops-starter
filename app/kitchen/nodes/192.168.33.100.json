@@ -14,7 +14,10 @@
   "run_list": [
     "recipe[common]",
     "recipe[consul-server]",
-    "recipe[docker-wrapper]"
+    "recipe[dnsmasq]",
+    "recipe[docker-wrapper]",
+    "recipe[docker-registrator-server]",
+    "recipe[docker-felk]"
   ],
   "automatic": {
     "ipaddress": "192.168.33.100"
